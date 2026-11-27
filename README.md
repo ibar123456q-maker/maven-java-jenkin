@@ -185,3 +185,27 @@ echo "<h1>Cloud Deployment on AWS EC2</h1><p>$(java -cp target/javamaven1-0.0.1-
 1. Take screenshots of your running EC2 instance dashboard, your SSH terminal output, and the live browser page at `http://<YOUR_PUBLIC_IP>`.
 2. Return to the **AWS Academy Learner Lab** tab and click **End Lab** so your lab credits are not drained while idle.
 * *Verification:* The **AWS** indicator dot changes from green to red/grey.
+
+
+
+##K8s
+
+
+# Create deployment
+kubectl create deployment mynginx --image=nginx
+
+# Check pods
+kubectl get pods
+
+# Scale to 3
+kubectl scale deployment mynginx --replicas=3
+
+# Scale to 5
+kubectl scale deployment mynginx --replicas=5
+
+# Scale down to 2
+kubectl scale deployment mynginx --replicas=2
+
+# Verify
+kubectl get deployments
+kubectl get pods
