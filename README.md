@@ -40,6 +40,10 @@ node {
 }
 
 
+cd "C:\ProgramData\Jenkins\.jenkins\workspace\Maven-Java-CI\target"
+PS C:\ProgramData\Jenkins\.jenkins\workspace\Maven-Java-CI\target> java -cp javamaven1-0.0.1-SNAPSHOT.jar com.example1.javamaven1.App
+
+
 #maven-web-jenkins
 
 node {
@@ -76,6 +80,13 @@ node {
         }
     }
 }
+
+tomcat
+
+PS C:\Users\hp> $env:JAVA_HOME="C:\Program Files\Eclipse Adoptium\jdk-21.0.13.10002-hotspot"
+PS C:\Users\hp> $env:PATH="$env:JAVA_HOME\bin;$env:PATH"
+PS C:\Users\hp> cd C:\apache-tomcat-10.1.62\bin
+PS C:\apache-tomcat-10.1.62\bin> .\catalina.bat run
 
 
 # amazon ec2
